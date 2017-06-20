@@ -6,7 +6,7 @@ Yulin Yang from yuyang@udel.edu
 
 06/19/2017
 
-Instruction for configuring xsens IMU, zed camera and velodyne LiDAR
+Instruction for configuring xsens IMU, zed camera, velodyne LiDAR and Loitor vi-sensor
 
 
 # driver download: 
@@ -34,11 +34,21 @@ github xsens website (detailed instruction for sensor configuratioin)
 
 github loitor visensor (including docs and instructions)
 
-https://github.com/loitor-vis/vi_sensor_sdk.git
+- https://github.com/loitor-vis/vi_sensor_sdk.git
 
 # build drivers:
-1. setup the ros work space, like ~/catkin_ws_data with subfolders ~/catkin_ws_data/src, ~/catkin_ws_data/devel, ~/catkin_ws_data/build;
+1. setup the ros work space, like 
+
+  ~/catkin_ws_data  with subfolders 
+
+  ~/catkin_ws_data/src
+ 
+  ~/catkin_ws_data/devel
+
+  ~/catkin_ws_data/build
+
 2. download all the source code into the folder of src;
+
 3. `catkin build`
 
 Note: If missing any libs, just find out and install. 
@@ -107,17 +117,27 @@ all the parameters needed for setting up are in the launch file (the frequency, 
 TODO: write a launch file to launch all the sensors together 
 
 1) record IMU, Camera and LiDAR data with selected rostopics
+
 `rosbag record -O icl_xx /imu/data /camera/left/image_raw /camera/right/image_raw /velodyne_points`
+
 2) record Camera and LiDAR with selected rostopics
+
 `rosbag record -O cl_xx /camera/left/image_raw /camera/right/image_raw /velodyne_points`
+
 3) record IMU and Camera data
+
 `rosbag record -O ic_xx /imu/data /camera/left/image_raw /camera/right/image_raw`
 
 4) record all the messages from IMU, Camera and LiDAR
+
 `rosbag record -a`
+
 4) record all the messages from camera and LiDAR
+
 `rosbag record -a`
+
 5) record all the messages from IMU and Camera
+
 `rosbag record -a`
 
 6) record all the messages from loitor vi-sensor, zed camera and LiDAR
