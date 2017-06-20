@@ -57,13 +57,13 @@ Note: If missing any libs, just find out and install.
 # check sensors
 1. Xsens IMU
 
-1) setup the sensor
+1.1) setup the sensor
 
 `rosrun xsens_driver mtdevice.py -m $sm -f $fs # publish sensor data`
 
 where $fs can be 1,5,10,20,40,50,80,100,200 or 400Hz. This configures the MTi to output inertial data and magnetometer data at the set ODR. The maximum supported inertial update rate is 400Hz and for the magnetometer it is 100Hz. The $sm can be set to 1,2 or 3. This can be used to set the sensor to output sensor data or filter outputs.
 
-2) start xsens IMU
+1.2) start xsens IMU
 
 %newgrp dialout
 
@@ -73,19 +73,19 @@ where $fs can be 1,5,10,20,40,50,80,100,200 or 400Hz. This configures the MTi to
 
 `roslaunch xsens_driver xsens_driver.launch`
 
-3) check the imu data
+1.3) check the imu data
 
 `rostopic echo /imu/data`
 
 2. Zed camera
 
-1) setup the sensor
+2.1) setup the sensor
 
 all the parameters needed for setting up are in the launch file (the frequency, the calibration parameters)
 
-2) `roslaunch zed_cpu_ros zed_cpu_ros.launch`
+2.2) `roslaunch zed_cpu_ros zed_cpu_ros.launch`
 
-3) check the camera images
+2.3) check the camera images
 
 `/camera/left/image_raw`
 
@@ -93,21 +93,21 @@ all the parameters needed for setting up are in the launch file (the frequency, 
 
 3. Velodyne LiDAR
 
-1) `roslaunch velodyne_pointcloud VLP16_points.launch`
+3.1) `roslaunch velodyne_pointcloud VLP16_points.launch`
 
-2) check the lidar data
+3.2) check the lidar data
 
 `/velodyne_points`
 
 4. Loitor vi-sensor
 
-1) `sudo -s`
+4.1) `sudo -s`
 
-2) `sudo chmod 777 /dev/ttyUSB0`
+4.2) `sudo chmod 777 /dev/ttyUSB0`
 
-3) `rosrun loitor_stereo_visensor loitor_stereo_visensor ~/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
+4.3) `rosrun loitor_stereo_visensor loitor_stereo_visensor ~/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
 
-4) check the topics
+4.4) check the topics
 
    `rostopic echo /imu0`
 	
