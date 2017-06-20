@@ -1,0 +1,38 @@
+#
+Mode
+12
+#
+HighSpeed Pre-Set
+m1,left,200,VGA,54
+m2,right,250,VGA,54
+m3,left,70,WVGA,54
+m4,right,70,WVGA,54
+m5,stereo,280,VGA,54
+m6,stereo,281,WVGA,54
+#
+Normal Pre-Set
+m7,left,150,VGA,54
+m8,right,150,VGA,54
+m9,left,150,WVGA,54
+m10,right,150,WVGA,54
+m11,stereo,183,VGA,27
+m12,stereo,250,WVGA,27
+#
+m13,Manual Mode
+0
+194
+VGA
+54
+#
+EG_mode
+3
+manual,50,200
+auto,300,5,58
+autoexp_manualgain,300,5,58,200
+/dev/ttyUSB0,5
+#
+IMU-acc-bias
+Gx,758
+Gy,-2
+Gz,-2608
+#
