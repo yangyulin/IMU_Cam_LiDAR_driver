@@ -105,7 +105,7 @@ all the parameters needed for setting up are in the launch file (the frequency, 
 
 4.2) `sudo chmod 777 /dev/ttyUSB0`
 
-4.3) `rosrun loitor_stereo_visensor loitor_stereo_visensor ~/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
+4.3) `rosrun loitor_stereo_visensor loitor_stereo_visensor ~/src/IMU_Cam_LiDAR_driver/vi_sensor_sdk/loitor_ros_workspace/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
 
 4.4) check the topics
 
@@ -143,6 +143,30 @@ TODO: write a launch file to launch all the sensors together
 6) record all the messages from loitor vi-sensor, zed camera and LiDAR
 
 `rosbag record -O vcl_xx /imu0 /cam0/image_raw /cam1/image_raw /camera/right/image_raw /camera/left/image_raw /velodyne_points`
+
+7) record messages from loitor vi-sensor, zed camera and LiDAR
+
+`rosbag record -O test1 /imu0 /cam0/image_raw /cam1/image_raw /camera/right/image_raw /camera/left/image_raw /velodyne_points /tf /velodyne_nodelet_manager/bond /velodyne_nodelet_manager_cloud/parameter_descriptions /velodyne_nodelet_manager_cloud/parameter_updates /velodyne_nodelet_manager_driver/parameter_descriptions /velodyne_nodelet_manager_driver/parameter_updates /velodyne_packets`
+
+# data check
+
+For check the rostopic:
+
+`rostopic list`
+
+For display the topic
+
+`rostopic echo \imu0`
+
+For display the image
+
+`rqt`
+
+`rosrun image_view image_view image:=/camera/left/image_raw`
+
+For display the pointcloud real time
+
+`rviz`
 
 
 
