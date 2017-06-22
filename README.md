@@ -79,7 +79,7 @@ where $fs can be 1,5,10,20,40,50,80,100,200 or 400Hz. This configures the MTi to
 
 2. Zed camera
 
-2.1) setup the sensor
+2.1) setup the sensor (note that zed need high speed USB port)
 
 all the parameters needed for setting up are in the launch file (the frequency, the calibration parameters)
 
