@@ -105,7 +105,7 @@ all the parameters needed for setting up are in the launch file (the frequency, 
 
 4.2) `sudo chmod 777 /dev/ttyUSB0`
 
-4.3) `rosrun loitor_stereo_visensor loitor_stereo_visensor ~/src/IMU_Cam_LiDAR_driver/vi_sensor_sdk/loitor_ros_workspace/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
+4.3) `rosrun loitor_stereo_visensor loitor_stereo_visensor src/IMU_Cam_LiDAR_driver/vi_sensor_sdk/loitor_ros_workspace/src/loitor_stereo_visensor/Loitor_VISensor_Setups.txt`
 
 4.4) check the topics
 
