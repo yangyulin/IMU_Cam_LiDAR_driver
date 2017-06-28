@@ -99,6 +99,16 @@ all the parameters needed for setting up are in the launch file (the frequency, 
 
 `/velodyne_points`
 
+3.3) adjust the frequency of the LiDAR
+
+Login the LiDAR following the manual and set the rpm as 60 * n Hz. n is the frequency you want. 
+
+Go to the Launch file and change the rpm as 60 * n Hz. n is the frequency. 
+
+There you go. It is ready for you to get data. 
+
+Be sure to check the batteray and the frequency of the LiDAR
+
 4. Loitor vi-sensor
 
 4.1) `sudo -s`
